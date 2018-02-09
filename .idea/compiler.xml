@@ -2,8 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="first_main" target="1.8" />
+      <module name="first_test" target="1.8" />
       <module name="sandbox_main" target="1.8" />
       <module name="sandbox_test" target="1.8" />
+      <module name="Test_2_main" target="1.8" />
+      <module name="Test_2_test" target="1.8" />
+      <module name="Trello_main" target="1.8" />
+      <module name="Trello_test" target="1.8" />
+      <module name="Trello_Tests_main" target="1.8" />
+      <module name="Trello_Tests_test" target="1.8" />
+      <module name="TrelloTest_main" target="1.8" />
+      <module name="TrelloTest_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

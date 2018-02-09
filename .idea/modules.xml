@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test_2/Test_2.iml" filepath="$PROJECT_DIR$/.idea/modules/Test_2/Test_2.iml" group="Test_2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trello/Trello.iml" filepath="$PROJECT_DIR$/.idea/modules/Trello/Trello.iml" group="Trello" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest_main.iml" group="TrelloTest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest_test.iml" group="TrelloTest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trello_Tests.iml" filepath="$PROJECT_DIR$/.idea/modules/Trello_Tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trello_Tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Trello_Tests_main.iml" group="Trello_Tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trello_Tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Trello_Tests_test.iml" group="Trello_Tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first.iml" filepath="$PROJECT_DIR$/.idea/modules/first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first_main.iml" filepath="$PROJECT_DIR$/.idea/modules/first_main.iml" group="first" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first_test.iml" filepath="$PROJECT_DIR$/.idea/modules/first_test.iml" group="first" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_main.iml" group="sandbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_test.iml" group="sandbox" />

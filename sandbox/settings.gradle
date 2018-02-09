@@ -1,2 +1,4 @@
 rootProject.name = 'sandbox'
+include 'Test_2'
+include 'Trello'
 
