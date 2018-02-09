@@ -20,7 +20,7 @@ public class LoginTrelloTest {
     @Test
     public void LoginTrelloTest() {
         openSite();
-       // wd.findElement(By.xpath("//div[2]")).click();
+        // wd.findElement(By.xpath("//div[2]")).click();
         clickLoginButton();
         enterUserName("elena.telran@yahoo.com");
         enterPassword("12345.com");
