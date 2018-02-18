@@ -19,15 +19,20 @@ public class TestBase {
         openSite("https://trello.com/");
     }
 
-    protected void confirmLogin() {
-        wd.findElement(By.id("login")).click();
+    @AfterClass
+    public void tearDown() {
+        wd.quit();
     }
 
-    protected void enterPassword(String password) {
-        wd.findElement(By.id("password")).click();
-        wd.findElement(By.id("password")).clear();
-        wd.findElement(By.id("password")).sendKeys(password);
+
+    public void openSite(String url) {
+        wd.get(url);
     }
+
+    protected void clickLoginButton() {
+        wd.findElement(By.linkText("Log In")).click();
+    }
+
 
     protected void enterUserName(String userName) {
         wd.findElement(By.id("user")).click();
@@ -36,17 +41,29 @@ public class TestBase {
     }
 
 
-    protected void openSite(String url) {
-        wd.get(url);
+    protected void enterPassword(String password) {
+        wd.findElement(By.id("password")).click();
+        wd.findElement(By.id("password")).clear();
+        wd.findElement(By.id("password")).sendKeys(password);
     }
 
-    protected void clickLoginButton() {
-        wd.findElement(By.linkText("Log In")).click();
+    protected void confirmLogin() {
+        wd.findElement(By.id("login")).click();
     }
 
-    @AfterClass
-    public void tearDown() {
-        wd.quit();
+
+
+    public void login(String user, String pwd){
+        clickLoginButton();
+        enterUserName(user);
+        enterPassword(pwd);
+        confirmLogin();
+    }
+
+
+    public void logout() {
+        wd.findElement(By.cssSelector("img.member-avatar")).click();
+        wd.findElement(By.cssSelector("a.js-logout")).click();
     }
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
@@ -60,17 +77,7 @@ public class TestBase {
 
 
 
-    private void logout() {
-        wd.findElement(By.cssSelector("span.member-initials")).click();
-        wd.findElementByCssSelector("a.js-logout").click();
-    }
 
 
 
-    public void login(String user, String pwd){
-        clickLoginButton();
-        enterUserName(user);
-        enterPassword(pwd);
-        confirmLogin();
-    }
 }
