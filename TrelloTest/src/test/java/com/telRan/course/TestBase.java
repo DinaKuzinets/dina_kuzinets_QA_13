@@ -1,3 +1,5 @@
+package com.telRan.course;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,20 +9,33 @@ import org.testng.annotations.BeforeClass;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class TestBase extends ApplicationManager {
     FirefoxDriver wd;
 
+    public String url = "https://trello.com/";
+    public String user = "dkuzinets@gmail.com";
+    public String pwd = "TelRan17";
 
 
     @BeforeClass
     public void setUp() throws Exception {
+        init();
+    }
+
+    public void init() {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        openSite("https://trello.com/");
+        openSite(url);
+        login(user, pwd);
     }
 
     @AfterClass
     public void tearDown() {
+        stop();
+    }
+
+    public void stop() {
+        logout();
         wd.quit();
     }
 
@@ -52,8 +67,7 @@ public class TestBase {
     }
 
 
-
-    public void login(String user, String pwd){
+    public void login(String user, String pwd) {
         clickLoginButton();
         enterUserName(user);
         enterPassword(pwd);
@@ -74,10 +88,6 @@ public class TestBase {
             return false;
         }
     }
-
-
-
-
 
 
 }

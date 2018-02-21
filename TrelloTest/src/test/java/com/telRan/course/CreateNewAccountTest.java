@@ -1,17 +1,19 @@
+package com.telRan.course;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class CreateNewAccountTest extends TestBase {
+public class CreateNewAccountTest extends TestBaseNegative {
 
     private String perName = "Dina";
     private String email = "dkuzinets@mail.ru";
-    private String pwd = "12345";
+    private String pwd = "12345678";
 
 
     @Test
-    public void NewAccount(){
+    public void NewAccount() {
         clickSighUpButton();
-        personName(perName);
+        fillPersonName(perName);
         enterEmail(email);
         enterPassword(pwd);
         comfirmSignUpButton();
@@ -22,7 +24,7 @@ public class CreateNewAccountTest extends TestBase {
     }
 
 
-    private void personName(String perName) {
+    private void fillPersonName(String perName) {
         wd.findElement(By.id("name")).click();
         wd.findElement(By.id("name")).clear();
         wd.findElement(By.id("name")).sendKeys(perName);
