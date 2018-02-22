@@ -1,4 +1,4 @@
-package com.telRan.course;
+package com.telRan.course.tests;
 
 import org.testng.annotations.Test;
 
@@ -7,7 +7,7 @@ public class LoginTrelloPositiveTest extends TestBase {
 
 
     @Test
-    public void LoginTrelloTest() {
+    public void loginTrelloTest() {
     }
 
 

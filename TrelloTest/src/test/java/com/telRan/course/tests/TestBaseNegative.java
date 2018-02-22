@@ -1,4 +1,4 @@
-package com.telRan.course;
+package com.telRan.course.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
