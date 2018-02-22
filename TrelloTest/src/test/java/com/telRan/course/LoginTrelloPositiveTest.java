@@ -3,7 +3,7 @@ package com.telRan.course;
 import org.testng.annotations.Test;
 
 
-public class PositiveLoginTrelloTest extends TestBase {
+public class LoginTrelloPositiveTest extends TestBase {
 
 
     @Test

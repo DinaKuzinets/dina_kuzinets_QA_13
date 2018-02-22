@@ -36,25 +36,25 @@ public class TestBaseNegative {
         wd.get(url);
     }
 
-    protected void clickLoginButton() {
+    public void clickLoginButton() {
         wd.findElement(By.linkText("Log In")).click();
     }
 
 
-    protected void enterUserName(String userName) {
+    public void enterUserName(String userName) {
         wd.findElement(By.id("user")).click();
         wd.findElement(By.id("user")).clear();
         wd.findElement(By.id("user")).sendKeys(userName);
     }
 
 
-    protected void enterPassword(String password) {
+    public void enterPassword(String password) {
         wd.findElement(By.id("password")).click();
         wd.findElement(By.id("password")).clear();
         wd.findElement(By.id("password")).sendKeys(password);
     }
 
-    protected void confirmLogin() {
+    public void confirmLogin() {
         wd.findElement(By.id("login")).click();
     }
 
