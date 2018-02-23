@@ -74,7 +74,6 @@ public class ApplicationManager {
 
     public void findBoard(String boardName) {
         wd.findElementByLinkText(boardName).click();
-        //   wd.findElement(By.cssSelector("div.chrome.chrome-64.windows.body-webkit-scrollbars.body-tabbed-page:nth-child(2) div.member-boards-view div.js-boards-page div.js-react-root div.boards-page-board-section.mod-no-sidebar:nth-child(1) ul.boards-page-board-section-list li.boards-page-board-section-list-item:nth-child(5) a.board-tile span.board-tile-details.is-badged > span.board-tile-details-name")).click();
     }
 
     public void openBoardMoreMenu() {
@@ -101,7 +100,7 @@ public class ApplicationManager {
     public void fillRenameBoardTitle(BoardData boardData) {
         wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).click();
         wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).clear();
-        wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).sendKeys(boardData.getNewBoardName());
+        wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).sendKeys(boardData.getBoardName());
     }
 
     public void openBoardMenu(){
@@ -112,8 +111,8 @@ public class ApplicationManager {
         wd.findElement(By.cssSelector("a.js-new-board")).click();
     }
 
-    public void enterNewBoardName(String boardName) {
-        wd.findElement(By.cssSelector("input.subtle-input")).sendKeys(boardName);
+    public void enterNewBoardName(BoardData boardData) {
+        wd.findElement(By.cssSelector("input.subtle-input")).sendKeys(boardData.getBoardName());
         wd.findElement(By.cssSelector("button.primary")).click();
     }
 
@@ -139,13 +138,18 @@ public class ApplicationManager {
         wd.findElement(By.cssSelector("input.primary.mod-list-add-button.js-save-edit")).click();
     }
 
-    public void findList(String listName) {
-        wd.findElementByLinkText(listName).click();
+
+    //String child = "//textarea[@aria-label='FirstList']";
+    //String parent = "//textarea[@class='list-header-name mod-list-name js-list-name-input']";
+    public void findList() {
+       // wd.findElement(By.xpath("//textarea[@class='list-header-name mod-list-name js-list-name-input']/textarea[@aria-label='FirstList']")).click();
+      //  wd.findElement(By.xpath(parent)).findElement(By.xpath(child)).click();
+        wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).findElement(By.xpath("..")).click();
     }
 
-    public void fillRenameListTitle(String newListName) {
-        wd.findElement(By.cssSelector("div.chrome.chrome-64.windows.body-webkit-scrollbars.body-custom-board-background.body-dark-board-background.body-board-view:nth-child(2) div.board-wrapper div.board-main-content div.board-canvas div.u-fancy-scrollbar.js-no-higher-edits.js-list-sortable.ui-sortable div.js-list.list-wrapper:nth-child(2) div.list.js-list-content div.list-header.js-list-header.u-clearfix.is-menu-shown > div.list-header-target.js-editing-target")).click();
-        wd.findElement(By.cssSelector("div.chrome.chrome-64.windows.body-webkit-scrollbars.body-custom-board-background.body-dark-board-background.body-board-view:nth-child(2) div.board-wrapper div.board-main-content div.board-canvas div.u-fancy-scrollbar.js-no-higher-edits.js-list-sortable.ui-sortable div.js-list.list-wrapper:nth-child(2) div.list.js-list-content div.list-header.js-list-header.u-clearfix.is-menu-shown > div.list-header-target.js-editing-target")).clear();
-        wd.findElement(By.cssSelector("div.chrome.chrome-64.windows.body-webkit-scrollbars.body-custom-board-background.body-dark-board-background.body-board-view:nth-child(2) div.board-wrapper div.board-main-content div.board-canvas div.u-fancy-scrollbar.js-no-higher-edits.js-list-sortable.ui-sortable div.js-list.list-wrapper:nth-child(2) div.list.js-list-content div.list-header.js-list-header.u-clearfix.is-menu-shown > div.list-header-target.js-editing-target")).sendKeys(newListName);
+    public void fillRenameListTitle(ListData listData) {
+        wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).click();
+        wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).clear();
+        wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).sendKeys(listData.getListName());
     }
 }

@@ -1,13 +1,13 @@
 package com.telRan.course.model;
 
 public class BoardData {
-    private final String newBoardName;
+    private final String boardName;
 
-    public BoardData(String newBoardName) {
-        this.newBoardName = newBoardName;
+    public BoardData(String boardName) {
+        this.boardName = boardName;
     }
 
-    public String getNewBoardName() {
-        return newBoardName;
+    public String getBoardName() {
+        return boardName;
     }
 }
