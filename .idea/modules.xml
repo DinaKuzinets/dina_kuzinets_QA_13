@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest_main.iml" group="TrelloTest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrelloTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TrelloTest_test.iml" group="TrelloTest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests_main.iml" group="addressbook_selenium_tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook_selenium_tests_test.iml" group="addressbook_selenium_tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_main.iml" group="sandbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_test.iml" group="sandbox" />

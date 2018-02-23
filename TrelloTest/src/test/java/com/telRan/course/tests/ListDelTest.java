@@ -8,6 +8,8 @@ public class ListDelTest extends TestBase{
     public void testDelBoard(){
         app.findBoard("ForListTests");
         app.findList();
+        app.openListMenu();
+        app.cliclArchiveThisList();
 
     }
 }

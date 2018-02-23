@@ -139,11 +139,7 @@ public class ApplicationManager {
     }
 
 
-    //String child = "//textarea[@aria-label='FirstList']";
-    //String parent = "//textarea[@class='list-header-name mod-list-name js-list-name-input']";
     public void findList() {
-       // wd.findElement(By.xpath("//textarea[@class='list-header-name mod-list-name js-list-name-input']/textarea[@aria-label='FirstList']")).click();
-      //  wd.findElement(By.xpath(parent)).findElement(By.xpath(child)).click();
         wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).findElement(By.xpath("..")).click();
     }
 
@@ -151,5 +147,13 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).click();
         wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).clear();
         wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).sendKeys(listData.getListName());
+    }
+
+    public void openListMenu() {
+        wd.findElement(By.xpath("//textarea[@aria-label='FirstList']")).findElement(By.xpath("..")).click();
+
+    }
+
+    public void cliclArchiveThisList() {
     }
 }
