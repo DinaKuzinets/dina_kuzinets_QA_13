@@ -127,7 +127,7 @@ public class ApplicationManager {
     }
 
     public void checkBoxContact() {
-    wd.findElementById("3").click();
+    wd.findElementByName("selected[]").click();
     }
 
     public void clickDelButton() {
@@ -135,6 +135,6 @@ public class ApplicationManager {
     }
 
     public void submitContactDel() {
-
+        wd.switchTo().alert().accept();
     }
 }
