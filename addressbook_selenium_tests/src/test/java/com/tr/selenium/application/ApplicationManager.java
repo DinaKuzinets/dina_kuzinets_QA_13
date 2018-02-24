@@ -70,7 +70,12 @@ public class ApplicationManager {
     }
 
     public void stop() {
-        wd.quit();
+        //logOut();
+       // wd.quit();
+    }
+
+    private void logOut() {
+        wd.findElement(By.cssSelector("a[onclick='document.logout.submit();']")).click();
     }
 
     public void selectGroup() {
@@ -79,5 +84,57 @@ public class ApplicationManager {
 
     public void initGroupDeletion() {
         wd.findElement(By.name("delete")).click();
+    }
+
+    public void goToAddNewPage() {
+        wd.findElement(By.cssSelector("a[href='edit.php']")).click();
+    }
+
+    public void fillContactForm(ContactData contactData) {
+        wd.findElementByName("firstname").click();
+        wd.findElementByName("firstname").clear();
+        wd.findElementByName("firstname").sendKeys(contactData.getFitstName());
+        wd.findElementByName("lastname").click();
+        wd.findElementByName("lastname").clear();
+        wd.findElementByName("lastname").sendKeys(contactData.getLastName());
+    }
+
+    public void cliclEnterButton() {
+        wd.findElementByName("submit").click();
+    }
+
+    public void returnToHomePage() {
+        wd.findElement(By.cssSelector("a[href='./']")).click();
+    }
+
+    public void clickContactEditButton() {
+      //  wd.findElementByCssSelector("a[href='edit.php?id=4']").click();
+        wd.findElementByCssSelector("img[title='EDIT']").click();
+    }
+
+    public void fillContactEditForm(ContactData contactData) {
+        wd.findElementByName("firstname").click();
+        wd.findElementByName("firstname").clear();
+        wd.findElementByName("firstname").sendKeys(contactData.getFitstName());
+        wd.findElementByName("lastname").click();
+        wd.findElementByName("lastname").clear();
+        wd.findElementByName("lastname").sendKeys(contactData.getLastName());
+
+    }
+
+    public void clickUpdateButton() {
+        wd.findElementByName("update").click();
+    }
+
+    public void checkBoxContact() {
+    wd.findElementById("3").click();
+    }
+
+    public void clickDelButton() {
+        wd.findElementByCssSelector("input[value='DELETE']").click();
+    }
+
+    public void submitContactDel() {
+
     }
 }
