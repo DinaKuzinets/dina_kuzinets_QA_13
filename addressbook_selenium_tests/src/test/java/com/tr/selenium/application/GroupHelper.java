@@ -4,14 +4,10 @@ import com.tr.selenium.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class GroupeHelper extends HelperBase {
+public class GroupHelper extends HelperBase {
 
-    public GroupeHelper(FirefoxDriver wd) {
+    public GroupHelper(FirefoxDriver wd) {
         super(wd);
-    }
-
-    public void returnToGroupsPage() {
-        click(By.linkText("group page"));
     }
 
     public void submitGroupCreation() {

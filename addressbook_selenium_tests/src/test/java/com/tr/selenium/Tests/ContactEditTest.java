@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 public class ContactEditTest extends TestBase {
 
     @Test
-    public void testContactEdit(){
-        app.clickContactEditButton();
-        app.fillContactEditForm(new ContactData("Jerry", "Freidlin"));
-        app.clickUpdateContactButton();
-        app.returnToContactHomePage();
+    public void testContactEdit() {
+        app.getContactHelper().clickContactEditButton();
+        app.getContactHelper().fillContactForm(new ContactData("Dina", "Kuzinets"));
+        app.getContactHelper().clickUpdateContactButton();
+        app.getNavigationHelper().returnToContactHomePage();
 
     }
 }

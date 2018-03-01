@@ -13,4 +13,17 @@ public class NavigationHelper extends HelperBase {
     public void goToGroupsPage() {
         click(By.linkText("GROUPS"));
     }
+
+    public void returnToGroupsPage() {
+        click(By.linkText("group page"));
+    }
+
+
+    public void returnToContactHomePage() {
+        click(By.cssSelector("a[href='./']"));
+    }
+
+    public void goToAddNewContactePage() {
+        click(By.cssSelector("a[href='edit.php']"));
+    }
 }
