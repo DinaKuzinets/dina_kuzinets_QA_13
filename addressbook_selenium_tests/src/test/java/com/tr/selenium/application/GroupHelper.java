@@ -31,4 +31,8 @@ public class GroupHelper extends HelperBase {
     public void initGroupDeletion() {
         click(By.name("delete"));
     }
+
+    public int getGroupCount() {
+        return wd.findElements(By.name("selected[]")).size();
+    }
 }

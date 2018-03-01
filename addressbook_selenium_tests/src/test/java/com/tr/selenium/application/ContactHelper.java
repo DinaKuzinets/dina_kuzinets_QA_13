@@ -41,4 +41,7 @@ public class ContactHelper extends HelperBase {
     }
 
 
+    public int getContactCount() {
+        return wd.findElements(By.cssSelector("img[title='EDIT']")).size();
+    }
 }
