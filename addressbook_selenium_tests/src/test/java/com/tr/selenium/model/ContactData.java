@@ -1,4 +1,4 @@
-package com.tr.selenium.application;
+package com.tr.selenium.model;
 
 public class ContactData {
     private final String fitstName;

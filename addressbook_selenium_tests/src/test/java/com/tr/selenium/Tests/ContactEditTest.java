@@ -1,6 +1,6 @@
 package com.tr.selenium.Tests;
 
-import com.tr.selenium.application.ContactData;
+import com.tr.selenium.model.ContactData;
 import org.testng.annotations.Test;
 
 public class ContactEditTest extends TestBase {
@@ -9,8 +9,8 @@ public class ContactEditTest extends TestBase {
     public void testContactEdit(){
         app.clickContactEditButton();
         app.fillContactEditForm(new ContactData("Jerry", "Freidlin"));
-        app.clickUpdateButton();
-        app.returnToHomePage();
+        app.clickUpdateContactButton();
+        app.returnToContactHomePage();
 
     }
 }

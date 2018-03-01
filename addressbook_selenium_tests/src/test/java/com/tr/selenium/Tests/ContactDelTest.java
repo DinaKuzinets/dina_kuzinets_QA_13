@@ -4,18 +4,18 @@ import org.testng.annotations.Test;
 
 public class ContactDelTest extends TestBase {
 
-//    @Test
-//    public void testDelContact(){
-//        app.clickContactEditButton();
-//        app.clickDelButton();
-//        app.returnToHomePage();
-//    }
+    @Test
+    public void testDelContact(){
+        app.clickContactEditButton();
+        app.Contact();
+        app.returnToContactHomePage();
+    }
 
     @Test
     public void testDelContact2 (){
         app.checkBoxContact();
-        app.clickDelButton();
+        app.Contact();
         app.submitContactDel();
-        app.returnToHomePage();
+        app.returnToContactHomePage();
     }
 }
