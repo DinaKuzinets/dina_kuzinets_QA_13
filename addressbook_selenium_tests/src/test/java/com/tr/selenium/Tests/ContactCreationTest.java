@@ -10,7 +10,11 @@ public class ContactCreationTest extends TestBase {
     public void testContactCreation() {
         int before = app.getContactHelper().getContactCount();
         app.getNavigationHelper().goToAddNewContactePage();
-        app.getContactHelper().fillContactForm(new ContactData("Jerry", "Freidlin", "Rishon", "1234567890"));
+        app.getContactHelper().fillContactForm(new ContactData()
+                .withFitstName("Vova")
+                .withLastName("Freidlin")
+                .withAddress("Rishon")
+                .withPhone("123456789"));
         app.getContactHelper().clickEnterContactButton();
         app.getNavigationHelper().returnToContactHomePage();
         int after = app.getContactHelper().getContactCount();

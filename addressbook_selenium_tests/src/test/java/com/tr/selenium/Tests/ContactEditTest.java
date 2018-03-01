@@ -10,11 +10,15 @@ public class ContactEditTest extends TestBase {
     public void testContactEdit() {
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().clickContactEditButton();
-        app.getContactHelper().fillContactForm(new ContactData("Dina", "Kuzinets", "Petah Tikva", "987654321"));
+        app.getContactHelper().fillContactForm(new ContactData()
+                .withFitstName("Dina")
+                .withLastName("Kuzinets")
+                .withAddress("Petah Tikva")
+                .withPhone("987654321"));
         app.getContactHelper().clickUpdateContactButton();
         app.getNavigationHelper().returnToContactHomePage();
         int after = app.getContactHelper().getContactCount();
-        Assert.assertEquals(after, before+1);
+        Assert.assertEquals(after, before);
 
     }
 }
