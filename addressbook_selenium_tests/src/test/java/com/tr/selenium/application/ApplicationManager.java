@@ -25,12 +25,12 @@ public class ApplicationManager {
     public void start() {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        sessionHelper = new SessionHelper(wd);
-        groupHelper = new GroupHelper(wd);
-        navigationHelper = new NavigationHelper(wd);
-        contactHelper = new ContactHelper(wd);
         openSite();
+        sessionHelper = new SessionHelper(wd);
         sessionHelper.logIn();
+        navigationHelper = new NavigationHelper(wd);
+        groupHelper = new GroupHelper(wd);
+        contactHelper = new ContactHelper(wd);
     }
 
 
