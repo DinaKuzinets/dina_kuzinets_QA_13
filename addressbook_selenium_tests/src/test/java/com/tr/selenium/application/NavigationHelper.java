@@ -14,12 +14,12 @@ public class NavigationHelper extends HelperBase {
         click(By.linkText("GROUPS"));
     }
 
-    public void returnToGroupsPage() {
-        click(By.linkText("group page"));
-    }
+//    public void returnToGroupsPage() {
+//        click(By.linkText("group page"));
+//    }
 
 
-    public void returnToContactHomePage() {
+    public void goToContactHomePage() {
         click(By.cssSelector("a[href='./']"));
     }
 

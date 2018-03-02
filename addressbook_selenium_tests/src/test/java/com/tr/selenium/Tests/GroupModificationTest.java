@@ -4,21 +4,22 @@ import com.tr.selenium.model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GroupCreationTests extends TestBase {
+public class GroupModificationTest extends TestBase {
 
     @Test
-    public void testGroupCreation() {
+    public void testModifGroup() {
         app.getNavigationHelper().goToGroupsPage();
         int before = app.getGroupHelper().getGroupCount();
-        app.getGroupHelper().initGroupCreation();
+        app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new GroupData()
                 .withGroupName("test1")
                 .withGroupHeader("Test1Header")
                 .withGroupFooter("Test1Footer"));
-        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().submitGroupModification();
         app.getNavigationHelper().goToGroupsPage();
         int after = app.getGroupHelper().getGroupCount();
-        Assert.assertEquals(after,before+1);
-    }
+        Assert.assertEquals(after, before);
 
+
+    }
 }
