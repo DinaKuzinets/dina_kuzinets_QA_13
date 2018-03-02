@@ -14,7 +14,7 @@ public class ContactEditTest extends TestBase {
         app.getContactHelper().fillContactForm(new ContactData()
                 .withFitstName("Dina")
                 .withLastName("Kuzinets")
-                .withAddress("Petah Tikva")
+                .withAddress(null)
                 .withPhone("987654321"));
         app.getContactHelper().clickUpdateContactButton();
         app.getNavigationHelper().goToContactHomePage();

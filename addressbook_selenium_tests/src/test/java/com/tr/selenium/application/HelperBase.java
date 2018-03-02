@@ -16,7 +16,7 @@ public class HelperBase {
 
     public void type(By locator, String text) {
         click(locator);
-        if (!text.equals(null)) {
+        if (text!=null) {
             String existText = wd.findElement(locator).getAttribute("value");
             if (!text.equals(existText)) {
                 wd.findElement(locator).clear();
