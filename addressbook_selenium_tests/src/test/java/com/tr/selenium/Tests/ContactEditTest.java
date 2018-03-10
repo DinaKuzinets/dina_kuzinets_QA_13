@@ -9,6 +9,9 @@ public class ContactEditTest extends TestBase {
     @Test
     public void testContactEdit() {
         app.getNavigationHelper().goToContactHomePage();
+        if(!app.getContactHelper().isContactExists()){
+            app.getContactHelper().createContact();
+        }
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().clickContactEditButton();
         app.getContactHelper().fillContactForm(new ContactData()

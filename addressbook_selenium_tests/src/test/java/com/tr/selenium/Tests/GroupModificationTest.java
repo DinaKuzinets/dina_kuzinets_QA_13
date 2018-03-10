@@ -9,14 +9,18 @@ public class GroupModificationTest extends TestBase {
     @Test
     public void testModifGroup() {
         app.getNavigationHelper().goToGroupsPage();
+        if(!app.getGroupHelper().isGroupExists()){
+            app.getGroupHelper().createGroup();
+        }
         int before = app.getGroupHelper().getGroupCount();
+        app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new GroupData()
-                .withGroupName("test1")
-                .withGroupHeader("Test1Header")
-                .withGroupFooter("Test1Footer"));
+                .withGroupName("test77")
+                .withGroupHeader("Test77Header")
+                .withGroupFooter("Test77Footer"));
         app.getGroupHelper().submitGroupModification();
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();
         Assert.assertEquals(after, before);
 

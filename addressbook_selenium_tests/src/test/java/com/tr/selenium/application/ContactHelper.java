@@ -11,6 +11,11 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
+
+    public void goToAddNewContactePage() {
+        click(By.cssSelector("a[href='edit.php']"));
+    }
+
     public void clickEnterContactButton() {
         click(By.name("submit"));
     }
@@ -46,5 +51,19 @@ public class ContactHelper extends HelperBase {
 
     public int getContactCount() {
         return wd.findElements(By.cssSelector("img[title='EDIT']")).size();
+    }
+
+    public boolean isContactExists() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public void createContact() {
+        goToAddNewContactePage();
+        fillContactForm(new ContactData()
+                .withFitstName("Dina")
+                .withLastName("Kuzinets")
+                .withAddress("Rishon")
+                .withPhone("123456789"));
+        clickEnterContactButton();
     }
 }

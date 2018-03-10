@@ -16,7 +16,7 @@ public class GroupCreationTests extends TestBase {
                 .withGroupHeader("Test1Header")
                 .withGroupFooter("Test1Footer"));
         app.getGroupHelper().submitGroupCreation();
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupHelper().returnToGroupPage();
         int after = app.getGroupHelper().getGroupCount();
         Assert.assertEquals(after,before+1);
     }

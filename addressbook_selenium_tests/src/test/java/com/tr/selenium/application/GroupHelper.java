@@ -37,19 +37,29 @@ public class GroupHelper extends HelperBase {
         return wd.findElements(By.name("selected[]")).size();
     }
 
+    public void returnToGroupPage(){
+        click(By.cssSelector("a[href='group.php']"));
+    }
+
     public void initGroupModification() {
         click(By.name("edit"));
     }
 
     public void submitGroupModification() {
-        click(By.xpath("//*[@value='Update']"));
+        click(By.name("update"));
     }
 
     public boolean isGroupExists() {
-        return wd.findElement(By.name("selected[]"));
+        return isElementPresent(By.name("selected[]"));
     }
-
     public void createGroup() {
+        initGroupCreation();
+        fillGroupForm(new GroupData()
+                .withGroupName("test1")
+                .withGroupHeader("Test1Header")
+                .withGroupFooter("Test1Footer"));
+        submitGroupCreation();
+        returnToGroupPage();
     }
 }
 
