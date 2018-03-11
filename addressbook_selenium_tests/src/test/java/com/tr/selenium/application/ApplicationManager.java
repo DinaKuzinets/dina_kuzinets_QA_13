@@ -32,7 +32,7 @@ public class ApplicationManager {
             wd = new InternetExplorerDriver();
         }
 
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         openSite();
         sessionHelper = new SessionHelper(wd);
         sessionHelper.logIn();
