@@ -15,3 +15,16 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-java:3.8.1'
     compile 'org.testng:testng:6.13.1'
 }
+
+
+task testBoards(type:Test){
+    useTestNG{
+        suites 'src/test/resources/testng-board.xml'
+    }
+}
+
+task testLists(type:Test){
+    useTestNG{
+        suites 'src/test/resources/testng-list.xml'
+    }
+}

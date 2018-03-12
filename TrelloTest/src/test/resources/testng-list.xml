@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+
+    <test name="Lists">
+        <classes>
+            <class name="com.telRan.course.tests.ListCreateTest" />
+            <class name="com.telRan.course.tests.ListRenameTest" />
+            <class name="com.telRan.course.tests.ListDelTest" />
+        </classes>
+    </test>
+</suite>
