@@ -4,6 +4,7 @@ import com.tr.selenium.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class ContactHelper extends HelperBase {
 
@@ -30,6 +31,8 @@ public class ContactHelper extends HelperBase {
         type(By.name("lastname"), contactData.getLastName());
         type(By.name("address"), contactData.getAddress());
         type(By.name("home"), contactData.getPhone());
+        new Select(wd.findElement(By.name("new_group")))
+                .selectByVisibleText(contactData.getGroup());
     }
 
     public void clickUpdateContactButton() {

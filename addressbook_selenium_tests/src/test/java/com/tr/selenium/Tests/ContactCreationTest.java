@@ -15,7 +15,8 @@ public class ContactCreationTest extends TestBase {
                 .withFitstName("Dina")
                 .withLastName("Kuzinets")
                 .withAddress("Rishon")
-                .withPhone("123456789"));
+                .withPhone("123456789")
+                .withGroup("test77"));
         app.getContactHelper().clickEnterContactButton();
         app.getNavigationHelper().goToContactHomePage();
         int after = app.getContactHelper().getContactCount();

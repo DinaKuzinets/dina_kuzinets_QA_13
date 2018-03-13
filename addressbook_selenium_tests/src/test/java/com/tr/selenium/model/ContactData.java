@@ -5,6 +5,8 @@ public class ContactData {
     private String lastName;
     private String address;
     private String phone;
+    private String group;
+
 
 //    public ContactData(String fitstName, String lastName, String address, String phone) {
 //        this.fitstName = fitstName;
@@ -29,6 +31,9 @@ public class ContactData {
         return phone;
     }
 
+    public String getGroup() {
+        return group;
+    }
 
     public ContactData withFitstName(String fitstName) {
         this.fitstName = fitstName;
@@ -47,6 +52,11 @@ public class ContactData {
 
     public ContactData withPhone(String phone) {
         this.phone = phone;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
         return this;
     }
 }

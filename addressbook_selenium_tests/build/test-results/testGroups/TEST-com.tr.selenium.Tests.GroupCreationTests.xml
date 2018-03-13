@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tr.selenium.Tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-11T20:14:56" hostname="DESKTOP-DL4VPGV" time="0.996">
+<testsuite name="com.tr.selenium.Tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-13T17:13:38" hostname="DESKTOP-DL4VPGV" time="0.996">
   <properties/>
   <testcase name="testGroupCreation" classname="com.tr.selenium.Tests.GroupCreationTests" time="0.996"/>
   <system-out><![CDATA[]]></system-out>
