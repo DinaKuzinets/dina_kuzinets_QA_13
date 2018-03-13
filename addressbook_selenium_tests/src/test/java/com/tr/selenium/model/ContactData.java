@@ -1,11 +1,23 @@
 package com.tr.selenium.model;
 
+import java.io.File;
+
 public class ContactData {
     private String fitstName;
     private String lastName;
     private String address;
     private String phone;
     private String group;
+    private File photo;
+
+    public File getPhoto() {
+        return photo;
+    }
+
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
 
 
 //    public ContactData(String fitstName, String lastName, String address, String phone) {
