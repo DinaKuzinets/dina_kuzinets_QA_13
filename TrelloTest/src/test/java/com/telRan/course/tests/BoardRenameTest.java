@@ -8,12 +8,12 @@ public class BoardRenameTest extends TestBase {
 
     @Test
     public void testRenameBoard() {
-        app.findBoard("TestBoard");
-        app.clickBoardName();
-        app.fillRenameBoardTitle(new BoardData("ForListTests"));
-        app.clickConfirmRenameBoardButton();
-        app.returnToHomepage();
-        app.clickSpareSpace();
+        app.getBoardHelper().findBoard("123");
+        app.getBoardHelper().clickBoardName();
+        app.getBoardHelper().fillRenameBoardTitle(new BoardData("1313"));
+        app.getBoardHelper().clickConfirmRenameBoardButton();
+        app.getNavigationHelper().returnToHomepage();
+        app.getBoardHelper().clickSpareSpace();
 
     }
 

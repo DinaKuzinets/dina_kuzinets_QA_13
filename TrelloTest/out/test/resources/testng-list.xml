@@ -6,7 +6,6 @@
         <classes>
             <class name="com.telRan.course.tests.ListCreateTest" />
             <class name="com.telRan.course.tests.ListRenameTest" />
-            <class name="com.telRan.course.tests.ListDelTest" />
         </classes>
     </test>
 </suite>

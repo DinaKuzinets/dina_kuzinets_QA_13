@@ -10,11 +10,12 @@ public class BoardNewCreateTest extends TestBase{
 
         @Test
     public void testNewBoard() {
-            app.openBoardMenu();
-            app.selectCreateBoard();
-            app.enterNewBoardName(new BoardData("ForListTests"));
-            app.returnToHomepage();
-            app.clickSpareSpace();
+            app.getBoardHelper().openBoardMenu();
+            app.getBoardHelper().selectCreateBoard();
+            app.getBoardHelper().enterNewBoardName(new BoardData("123"));
+            app.getBoardHelper().clickCreateBoardButton();
+            app.getNavigationHelper().returnToHomepage();
+            app.getBoardHelper().clickSpareSpace();
           //  wd.findElement(By.cssSelector("a.board-menu-header-close-button.icon-lg.icon-close.js-hide-sidebar")).click();
         }
 

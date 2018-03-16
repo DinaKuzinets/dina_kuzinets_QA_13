@@ -6,10 +6,11 @@ public class ListDelTest extends TestBase{
 
     @Test
     public void testDelBoard(){
-        app.findBoard("ForListTests");
-        app.findList();
-        app.openListMenu();
-        app.cliclArchiveThisList();
+        app.getBoardHelper().findBoard("123");
+        app.getListHelper().findList();
+        app.getListHelper().openListMenu();
+        app.getListHelper().cliclArchiveThisList();
+        app.getNavigationHelper().returnToHomepage();
 
     }
 }

@@ -8,12 +8,12 @@ public class BoardDeleteTest extends TestBase {
 
     @Test
     public void testDelBoard() {
-        app.findBoard("TestBoard");
-        app.openBoardMoreMenu();
-        app.selectCloseBoard();
-        app.clickConfirmCloseBoardButton();
-        app.returnToHomepage();
-        app.clickSpareSpace();
+        app.getBoardHelper().findBoard("1313");
+        app.getBoardHelper().clickMoreMenuBoardButton();
+        app.getBoardHelper().selectCloseBoard();
+        app.getBoardHelper().clickConfirmCloseBoardButton();
+        app.getNavigationHelper().returnToHomepage();
+        app.getBoardHelper().clickSpareSpace();
     }
 
 
