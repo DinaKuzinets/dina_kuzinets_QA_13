@@ -10,7 +10,7 @@ public class ListDelTest extends TestBase{
         app.getListHelper().findList();
         app.getListHelper().openListMenu();
         app.getListHelper().cliclArchiveThisList();
-        app.getNavigationHelper().returnToHomepage();
+        app.getNavigationHelper().goToHomepage();
 
     }
 }

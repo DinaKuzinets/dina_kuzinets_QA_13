@@ -48,4 +48,12 @@ public class ListHelper extends HelperBase{
         click(By.cssSelector("a.js-close-list"));
 
     }
+
+    public int getListCount() {
+        return wd.findElements(By.cssSelector("div.list.js-list-content")).size();
+    }
+
+    public void clickListSpareSpace() {
+        click(By.cssSelector("div.board-header.u-clearfix.js-board-header"));
+    }
 }

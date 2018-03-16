@@ -1,16 +1,22 @@
 package com.telRan.course.tests;
 
 import com.telRan.course.model.ListData;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ListRenameTest extends TestBase{
 
     @Test
     public void testRenameList(){
+       // app.getNavigationHelper().goToHomepage();
         app.getBoardHelper().findBoard("1313");
+        int before = app.getListHelper().getListCount();
         app.getListHelper().findList();
         app.getListHelper().fillRenameListTitle(new ListData("MyList"));
-        app.getNavigationHelper().returnToHomepage();
-        app.getBoardHelper().clickSpareSpace();
+        app.getListHelper().clickListSpareSpace();
+        int after = app.getListHelper().getListCount();
+        Assert.assertEquals(after,before);
+        app.getNavigationHelper().goToHomepage();
+        app.getBoardHelper().clickBoardSpareSpace();
     }
 }

@@ -11,7 +11,7 @@ public class NavigationHelper extends HelperBase {
     }
 
 
-    public void returnToHomepage() {
+    public void goToHomepage() {
         click(By.cssSelector("span.header-btn-icon.icon-lg.icon-board-back-to-home.light"));
     }
 

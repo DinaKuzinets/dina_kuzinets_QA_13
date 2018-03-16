@@ -40,10 +40,12 @@ public class ApplicationManager{
 //        properties.load(new FileReader(String.format("C:src/test/resources/%s.properties", target)));
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         boardHelper = new BoardHelper(wd);
         listHelper = new ListHelper(wd );
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);
+
         openSite(url);
         sessionHelper.login(user, pwd);
     }

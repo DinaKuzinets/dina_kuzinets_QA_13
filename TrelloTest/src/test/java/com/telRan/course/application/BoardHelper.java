@@ -4,7 +4,7 @@ import com.telRan.course.model.BoardData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BoardHelper extends HelperBase{
+public class BoardHelper extends HelperBase {
 
     public BoardHelper(FirefoxDriver wd) {
         super(wd);
@@ -18,7 +18,7 @@ public class BoardHelper extends HelperBase{
 //        wd.findElement(By.cssSelector("span.icon-sm.icon-overflow-menu-horizontal.board-menu-navigation-item-link-icon")).click();
 //    }
 
-    public void   selectCloseBoard() {
+    public void selectCloseBoard() {
         click(By.cssSelector("a.board-menu-navigation-item-link.js-close-board"));
     }
 
@@ -35,22 +35,22 @@ public class BoardHelper extends HelperBase{
     }
 
     public void fillRenameBoardTitle(BoardData boardData) {
-        type(By.cssSelector("input.js-board-name.js-autofocus"),boardData.getBoardName());
+        type(By.cssSelector("input.js-board-name.js-autofocus"), boardData.getBoardName());
 //        wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).click();
 //        wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).clear();
 //        wd.findElement(By.cssSelector("input.js-board-name.js-autofocus")).sendKeys(boardData.getBoardName());
     }
 
-    public void openBoardMenu(){
+    public void openBoardMenu() {
         click(By.cssSelector("span.header-btn-icon.icon-lg.icon-add.light"));
-}
+    }
 
     public void selectCreateBoard() {
         click(By.cssSelector("span.sub-name"));
     }
 
     public void enterNewBoardName(BoardData boardData) {
-        type(By.cssSelector("input.subtle-input"),boardData.getBoardName());
+        type(By.cssSelector("input.subtle-input"), boardData.getBoardName());
 //        wd.findElement(By.cssSelector("input.subtle-input")).click();
 //        wd.findElement(By.cssSelector("input.subtle-input")).clear();
 //        wd.findElement(By.cssSelector("input.subtle-input")).sendKeys(boardData.getBoardName());
@@ -65,7 +65,11 @@ public class BoardHelper extends HelperBase{
         click(By.cssSelector("button.primary"));
     }
 
-    public void clickSpareSpace() {
+    public void clickBoardSpareSpace() {
         click(By.cssSelector("div.boards-page-board-section-header"));
+    }
+
+    public int getBoardCount() {
+        return wd.findElements(By.cssSelector("span.board-tile-fade")).size();
     }
 }
