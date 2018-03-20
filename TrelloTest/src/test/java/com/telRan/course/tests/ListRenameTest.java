@@ -12,7 +12,7 @@ public class ListRenameTest extends TestBase{
         app.getBoardHelper().findBoard("1313");
         int before = app.getListHelper().getListCount();
         app.getListHelper().findList();
-        app.getListHelper().fillRenameListTitle(new ListData("MyList"));
+        app.getListHelper().fillRenameListTitle(new ListData().withListName("MyList"));
         app.getListHelper().clickListSpareSpace();
         int after = app.getListHelper().getListCount();
         Assert.assertEquals(after,before);

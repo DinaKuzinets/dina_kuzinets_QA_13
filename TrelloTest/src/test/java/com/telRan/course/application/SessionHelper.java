@@ -1,7 +1,6 @@
 package com.telRan.course.application;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SessionHelper extends HelperBase{
@@ -10,10 +9,10 @@ public class SessionHelper extends HelperBase{
         super(wd);
     }
 
-    public void login(String user, String pwd) {
+    public void login(String userName, String pwd) {
         click(By.linkText("Log In"));
-        type(By.id("user"), "dkuzinets@gmail.com");
-        type(By.id("password"), "TelRan17");
+        type(By.id("user"), userName);
+        type(By.id("password"), pwd);
         click(By.id("login"));
     }
 

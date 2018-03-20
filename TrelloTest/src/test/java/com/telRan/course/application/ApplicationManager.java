@@ -1,30 +1,20 @@
 package com.telRan.course.application;
 
-import com.sun.javafx.binding.StringFormatter;
-import com.telRan.course.model.BoardData;
-import com.telRan.course.model.ListData;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager{
+    FirefoxDriver wd;
     private BoardHelper boardHelper;
     private ListHelper listHelper;
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
-
-    public String url = "https://trello.com/";
-    public String user = "dkuzinets@gmail.com";
-    public String pwd = "TelRan17";
-    FirefoxDriver wd;
    // Properties properties;
+
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
@@ -46,8 +36,8 @@ public class ApplicationManager{
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);
 
-        openSite(url);
-        sessionHelper.login(user, pwd);
+        openSite("https://trello.com/");
+        sessionHelper.login("dkuzinets@gmail.com", "TelRan17");
     }
 
     public void stop() {
@@ -58,7 +48,6 @@ public class ApplicationManager{
     public void openSite(String url) {
         wd.get(url);
     }
-
 
 
     public BoardHelper getBoardHelper() {

@@ -13,7 +13,7 @@ public class ListCreateTest extends TestBase {
         app.getBoardHelper().findBoard("ForListTests");
         int before = app.getListHelper().getListCount();
         app.getListHelper().clickAddList();
-        app.getListHelper().enterNewListName(new ListData("FirstList"));
+        app.getListHelper().enterNewListName(new ListData().withListName("FirstList"));
         app.getListHelper().clickSaveListButton();
         int after = app.getListHelper().getListCount();
         Assert.assertEquals(after, before+1);

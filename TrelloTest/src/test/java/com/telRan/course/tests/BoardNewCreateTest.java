@@ -13,7 +13,7 @@ public class BoardNewCreateTest extends TestBase{
             int before = app.getBoardHelper().getBoardCount();
             app.getBoardHelper().openBoardMenu();
             app.getBoardHelper().selectCreateBoard();
-            app.getBoardHelper().enterNewBoardName(new BoardData("123"));
+            app.getBoardHelper().enterNewBoardName(new BoardData().withBoardName("123"));
             app.getBoardHelper().clickCreateBoardButton();
             app.getNavigationHelper().goToHomepage();
             int after = app.getBoardHelper().getBoardCount();

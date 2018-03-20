@@ -49,6 +49,11 @@ public class ApplicationManager {
         contactHelper = new ContactHelper(wd);
     }
 
+    public void getBrowserLog(){
+        System.out.println(wd.manage().logs().getAvailableLogTypes());
+        wd.manage().logs().get("browser").forEach(l -> System.out.println(l));
+    }
+
 
     public void openSite(String url) {
                 wd.get(url);
