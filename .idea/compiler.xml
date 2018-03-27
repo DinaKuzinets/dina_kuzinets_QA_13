@@ -16,6 +16,8 @@
       <module name="Trello_Tests_test" target="1.8" />
       <module name="TrelloTest_main" target="1.8" />
       <module name="TrelloTest_test" target="1.8" />
+      <module name="units_main" target="1.8" />
+      <module name="units_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,16 +2,17 @@ package com.telRan.course.application;
 
 import com.telRan.course.model.BoardData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BoardHelper extends HelperBase {
 
-    public BoardHelper(FirefoxDriver wd) {
+    public BoardHelper(WebDriver wd) {
         super(wd);
     }
 
     public void findBoard(String boardName) {
-        wd.findElementByLinkText(boardName).click();
+        wd.findElement(By.linkText(boardName)).click();
     }
 
 //    public void openBoardMoreMenu() {

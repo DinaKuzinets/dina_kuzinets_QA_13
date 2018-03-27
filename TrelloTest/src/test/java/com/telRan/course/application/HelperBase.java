@@ -9,9 +9,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.File;
 
 public class HelperBase {
-    FirefoxDriver wd;
+    WebDriver wd;
 
-    public HelperBase(FirefoxDriver wd) {
+    public HelperBase(WebDriver wd) {
         this.wd = wd;
 
     }

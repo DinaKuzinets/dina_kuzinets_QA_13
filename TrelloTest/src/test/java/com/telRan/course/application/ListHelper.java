@@ -2,11 +2,12 @@ package com.telRan.course.application;
 
 import com.telRan.course.model.ListData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class ListHelper extends HelperBase{
 
-    public ListHelper(FirefoxDriver wd) {
+    public ListHelper(WebDriver wd) {
         super(wd);
     }
 
