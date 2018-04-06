@@ -33,8 +33,6 @@ public class HelperBase {
     }
 
 
-
-
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
             wd.switchTo().alert();
@@ -45,5 +43,14 @@ public class HelperBase {
     }
 
 
+
+    public void     attach(By locator, File file) {
+        if (file != null) {
+            wd.findElement(locator).sendKeys(file.getAbsolutePath());
+        }
+    }
 }
+
+
+
 

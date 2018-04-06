@@ -13,7 +13,7 @@ public class ContactCreationTest extends TestBase {
         app.getNavigationHelper().goToContactHomePage();
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().goToAddNewContactePage();
-        File photo = new File("addressbook_selenium_tests/src/test/resources/cat.jpg");
+        File photo = new File("addressbook_selenium_tests/src/test/resources/cat_2.jpg");
         app.getContactHelper().fillContactForm(new ContactData()
                 .withFitstName("123")
                 .withLastName("123")

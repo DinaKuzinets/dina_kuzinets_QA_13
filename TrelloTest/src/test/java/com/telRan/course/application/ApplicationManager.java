@@ -21,6 +21,7 @@ public class ApplicationManager{
     private ListHelper listHelper;
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
+    private ProfileHelper profileHelper;
     private String browser;
     Properties properties;
 
@@ -60,6 +61,7 @@ public class ApplicationManager{
         listHelper = new ListHelper(wd );
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);
+        profileHelper = new ProfileHelper(wd);
 
         //openSite("https://trello.com/");
         openSite(properties.getProperty("web.baseUrl"));
@@ -91,5 +93,9 @@ public class ApplicationManager{
 
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
+    }
+
+    public ProfileHelper getProfileHelper() {
+        return profileHelper;
     }
 }

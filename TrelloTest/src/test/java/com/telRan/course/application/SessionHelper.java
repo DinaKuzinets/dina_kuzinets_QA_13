@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+
 public class SessionHelper extends HelperBase{
 
     public SessionHelper(WebDriver wd) {
@@ -21,6 +23,7 @@ public class SessionHelper extends HelperBase{
         click(By.cssSelector("img.member-avatar"));
         click(By.cssSelector("a.js-logout"));
     }
+
 
 
 
