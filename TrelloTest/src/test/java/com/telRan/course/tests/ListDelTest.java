@@ -6,7 +6,10 @@ public class ListDelTest extends TestBase{
 
     @Test
     public void testDelBoard(){
-        app.getBoardHelper().findBoard("123");
+        app.getBoardHelper().findBoard("ForListTests");
+        if(!app.getListHelper().isListExists()){
+            app.getListHelper().createList();
+        }
         app.getListHelper().findList();
         app.getListHelper().openListMenu();
         app.getListHelper().cliclArchiveThisList();

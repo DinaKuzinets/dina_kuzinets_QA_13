@@ -9,7 +9,9 @@ public class BoardRenameTest extends TestBase {
 
     @Test
     public void testRenameBoard() {
-      //  app.getNavigationHelper().goToHomepage();
+        if(!app.getBoardHelper().isGroupExists()){
+            app.getBoardHelper().createBoard();
+        }
         int before = app.getBoardHelper().getBoardCount();
         app.getBoardHelper().findBoard("123");
         app.getBoardHelper().clickBoardName();
@@ -18,7 +20,10 @@ public class BoardRenameTest extends TestBase {
         app.getNavigationHelper().goToHomepage();
         int after = app.getBoardHelper().getBoardCount();
         Assert.assertEquals(after, before);
-        app.getBoardHelper().clickBoardSpareSpace();
+
+
+
+
 
     }
 

@@ -8,8 +8,10 @@ public class ListRenameTest extends TestBase{
 
     @Test
     public void testRenameList(){
-       // app.getNavigationHelper().goToHomepage();
-        app.getBoardHelper().findBoard("1313");
+        app.getBoardHelper().findBoard("ForListTests");
+        if(!app.getListHelper().isListExists()){
+            app.getListHelper().createList();
+        }
         int before = app.getListHelper().getListCount();
         app.getListHelper().findList();
         app.getListHelper().fillRenameListTitle(new ListData().withListName("MyList"));

@@ -1,5 +1,6 @@
 package com.telRan.course.application;
 
+import com.sun.javafx.binding.StringFormatter;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -20,10 +22,12 @@ public class ApplicationManager{
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private String browser;
-   // Properties properties;
+    Properties properties;
+
 
     public ApplicationManager(String browser) {
         this.browser = browser;
+        properties = new Properties();
     }
 
 
@@ -37,8 +41,8 @@ public class ApplicationManager{
     }
 
     public void init() throws IOException {
-//        String target = properties.getProperty("target", "local");
-//        properties.load(new FileReader(String.format("C:src/test/resources/%s.properties", target)));
+        String target = properties.getProperty("target", "local");
+        properties.load(new FileReader(String.format("src/test/resources/%s.properties", target)));
         if(browser.equals(BrowserType.CHROME)){
             wd = new ChromeDriver();
         }else if(browser.equals(BrowserType.FIREFOX)){
@@ -49,7 +53,7 @@ public class ApplicationManager{
             wd = new EdgeDriver();
         }
 
-//        wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
+
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         boardHelper = new BoardHelper(wd);
@@ -57,8 +61,10 @@ public class ApplicationManager{
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);
 
-        openSite("https://trello.com/");
-        sessionHelper.login("dkuzinets@gmail.com", "TelRan17");
+        //openSite("https://trello.com/");
+        openSite(properties.getProperty("web.baseUrl"));
+        sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPwd"));
+      //  sessionHelper.login("dkuzinets@gmail.com", "TelRan17");
     }
 
     public void stop() {

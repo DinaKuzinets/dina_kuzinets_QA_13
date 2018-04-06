@@ -33,6 +33,8 @@ public class HelperBase {
     }
 
 
+
+
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
             wd.switchTo().alert();
