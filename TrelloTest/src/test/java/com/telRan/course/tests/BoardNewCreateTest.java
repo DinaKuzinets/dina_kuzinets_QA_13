@@ -1,6 +1,8 @@
 package com.telRan.course.tests;
 
 import com.telRan.course.model.BoardData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,11 +19,6 @@ public class BoardNewCreateTest extends TestBase {
         app.getNavigationHelper().goToHomepage();
         int after = app.getBoardHelper().getBoardCount();
         Assert.assertEquals(after, before + 1);
-
-
-
-
-
 
 
     }

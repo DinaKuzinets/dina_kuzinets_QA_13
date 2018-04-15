@@ -79,6 +79,11 @@ public class ApplicationManager{
     }
 
 
+    public void getBrowserLog(){
+        System.out.println(wd.manage().logs().getAvailableLogTypes());
+        wd.manage().logs().get("browser").forEach(l -> System.out.println(l));
+    }
+
     public BoardHelper getBoardHelper() {
         return boardHelper;
     }

@@ -15,3 +15,9 @@ gradle-app.setting
 .idea/workspace.xml
 *.log
 TrelloTest/out/test/resources/local.properties
+TrelloTest/src/test/resources/logback.xml
+*.properties
+TrelloTest/out/test/resources/local.properties
+TrelloTest/out/test/resources/logback.xml
+TrelloTest/out/test/resources/local.properties
+.idea/workspace.xml

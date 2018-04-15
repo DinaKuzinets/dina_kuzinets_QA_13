@@ -44,7 +44,7 @@ public class HelperBase {
 
 
 
-    public void     attach(By locator, File file) {
+    public void attach(By locator, File file) {
         if (file != null) {
             wd.findElement(locator).sendKeys(file.getAbsolutePath());
         }
